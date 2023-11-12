@@ -3,7 +3,7 @@
 import { View, Text, Image, StyleSheet,TextInput,TouchableOpacity } from 'react-native'
 import React, { useState } from 'react'
 
-const SignupScreen = () => {
+const SignupScreen = ({navigation}) => {
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
     const [fullName, setFullName] = useState("")
@@ -44,7 +44,7 @@ const SignupScreen = () => {
     </TouchableOpacity>
 
     <View style={{position: 'absolute', bottom:0, marginBottom:40}}>
-    <TouchableOpacity onPress={()=>{}} >
+    <TouchableOpacity onPress={()=> navigation.navigate("Login")} >
         <Text>Already have an account? Sign in</Text>
     </TouchableOpacity> 
     </View>
